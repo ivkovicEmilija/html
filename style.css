@@ -57,13 +57,15 @@ nav{
     width: 90%;
     color: white;
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
     font-size: 55px;
 }
-
+.text-box h1{
+    font-size: 70px;
+}
 .text-box p{
     font-size: 30px;
 }
@@ -72,6 +74,26 @@ nav{
 @media(max-width: 700px){
     .text-box {
         font-size:20px ;
+    }
+    .nav-links ul li{
+        display: block;
+
+    }
+    .nav-links {
+        position: absolute;
+        background: #777;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    .nav-links ul{
+        padding: 6px;
+
     }
      
 }
@@ -122,9 +144,19 @@ h1{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+nav .bi{
+    display: none;
+}
 @media(max-width:700px){
     .row{
         flex-direction: column;
+    }
+    nav .bi{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
     }
 }
 

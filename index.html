@@ -18,8 +18,8 @@
     <nav>
             <a href=""><img src=""></a>
           
-       <div class="nav-links">
-        
+       <div class="nav-links" id="navLinks">
+        <i class="bi bi-x-square-fill" onclick="hideMenu()"></i>
         <ul>
             <li><a href="">HOME</a></li>
             <li><a href="">RESTAURANTS</a></li>
@@ -28,7 +28,7 @@
             <li><a href="">ABOUT FIESTA</a></li>
         </ul>
        </div>
-       
+       <i class="bi bi-list" onclick="showMenu()"></i>
     </nav>
 
     <div class="text-box">
@@ -163,5 +163,20 @@
         </div>
     </section>
     
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+        
+        </script>
+
 </body>
+
+
 </html>
